@@ -1,0 +1,794 @@
+Thankyou for adding back integration in filter screen its looking good. Now we need to integrate the api of leads in lead screen i already have shared the code of lead screen class i will share you api details of leads.
+Currently in lead screen we are displaying sample data of leads. Now the leads data will be come from api also adding the possible error handling. The given api have an paging so in lead screen we will display one page leads and at the bottom add more leads loading icon then next page leads will be displayed it is the corrct form?.
+
+API Details - 
+https://kodemelonthemes.com/lead_mgmt/api/leads?page=1&limit=25
+Method - GET
+Response - 
+{
+  "page": 1,
+  "limit": 25,
+  "total": 36,
+  "totalPages": 2,
+  "leads": [
+    {
+      "id": 47,
+      "name": "Nam",
+      "email": "prathamvajpai014@gmail.com",
+      "phone": "8770483647",
+      "status": "New",
+      "score": "90",
+      "website": "",
+      "summary": "djdhshdjshduppmsjs",
+      "currency": "INR",
+      "budget": "26",
+      "address": "ksjsjd",
+      "labels": [
+        "Repeat Client"
+      ],
+      "startDate": null,
+      "companyName": "",
+      "category": "E-commerce Setup",
+      "city": "Gwl",
+      "createdAt": "2025-05-08 05:23:48"
+    },
+    {
+      "id": 46,
+      "name": "Pratham",
+      "email": "prathamvajpai014@gmail.com",
+      "phone": "8770483647",
+      "status": "New",
+      "score": "12",
+      "website": "",
+      "summary": "jajshshhajsjdjs",
+      "currency": "INR",
+      "budget": "56",
+      "address": "nodia",
+      "labels": [
+        "Repeat Client"
+      ],
+      "startDate": null,
+      "companyName": "",
+      "category": "UI/UX Design",
+      "city": "Gwalior",
+      "createdAt": "2025-05-02 09:56:13"
+    },
+    {
+      "id": 45,
+      "name": "Rahun Doe",
+      "email": "Rahun.doe@example.com",
+      "phone": "444445555",
+      "status": "New",
+      "score": "",
+      "website": "",
+      "summary": "I want a mobile app",
+      "currency": "INR",
+      "budget": "120",
+      "address": "ttttt",
+      "labels": [
+        "New Lead",
+        "dddd"
+      ],
+      "startDate": null,
+      "companyName": "ABc",
+      "category": "kkkk",
+      "city": "gwal",
+      "createdAt": "2025-05-02 06:33:57"
+    },
+    {
+      "id": 44,
+      "name": "Rahun Doe",
+      "email": "Rahun.doe@example.com",
+      "phone": "444445555",
+      "status": "",
+      "score": "10",
+      "website": "",
+      "summary": "I want a mobile app",
+      "currency": "INR",
+      "budget": "120",
+      "address": "ttttt",
+      "labels": [
+        "New Lead",
+        "dddd"
+      ],
+      "startDate": null,
+      "companyName": "ABc",
+      "category": "kkkk",
+      "city": "gwal",
+      "createdAt": "2025-05-02 06:31:42"
+    },
+    {
+      "id": 43,
+      "name": "Rahun Doe",
+      "email": "Rahun.doe@example.com",
+      "phone": "444445555",
+      "status": "New",
+      "score": "10",
+      "website": "",
+      "summary": "I want a mobile app",
+      "currency": "INR",
+      "budget": "120",
+      "address": "ttttt",
+      "labels": [
+        "New Lead",
+        "dddd"
+      ],
+      "startDate": null,
+      "companyName": "ABc",
+      "category": "kkkk",
+      "city": "",
+      "createdAt": "2025-05-02 06:31:31"
+    },
+    {
+      "id": 42,
+      "name": "Rahun Doe",
+      "email": "Rahun.doe@example.com",
+      "phone": "444445555",
+      "status": "New",
+      "score": "10",
+      "website": "",
+      "summary": "I want a mobile app",
+      "currency": "INR",
+      "budget": "120",
+      "address": "ttttt",
+      "labels": [
+        "New Lead",
+        "dddd"
+      ],
+      "startDate": null,
+      "companyName": "",
+      "category": "kkkk",
+      "city": "gwal",
+      "createdAt": "2025-05-02 06:30:27"
+    },
+    {
+      "id": 41,
+      "name": "JJJ Doe",
+      "email": "Rahun.doe@example.com",
+      "phone": "444445555",
+      "status": "New",
+      "score": "10",
+      "website": "https://www.johndoe.com",
+      "summary": "I want a web app111",
+      "currency": "INR",
+      "budget": "120",
+      "address": "ttttt",
+      "labels": [
+        "New Lead",
+        "sssss"
+      ],
+      "startDate": null,
+      "companyName": "ABc",
+      "category": "Website Development",
+      "city": "Delhi",
+      "createdAt": "2025-05-02 06:14:55"
+    },
+    {
+      "id": 40,
+      "name": "Rahun Doe",
+      "email": "Rahun.doe@example.com",
+      "phone": "444445555",
+      "status": "New",
+      "score": "10",
+      "website": "",
+      "summary": "I want a mobile app",
+      "currency": "INR",
+      "budget": "120",
+      "address": "ttttt",
+      "labels": [
+        "New Lead",
+        "dddd"
+      ],
+      "startDate": null,
+      "companyName": "ABc",
+      "category": "kkkk",
+      "city": "",
+      "createdAt": "2025-05-02 06:14:54"
+    },
+    {
+      "id": 39,
+      "name": "Rahun Doe",
+      "email": "Rahun.doe@example.com",
+      "phone": "444445555",
+      "status": "New",
+      "score": "10",
+      "website": "",
+      "summary": "I want a mobile app",
+      "currency": "INR",
+      "budget": "120",
+      "address": "ttttt",
+      "labels": [
+        "New Lead",
+        "dddd"
+      ],
+      "startDate": null,
+      "companyName": "ABc",
+      "category": "",
+      "city": "",
+      "createdAt": "2025-05-02 06:12:14"
+    },
+    {
+      "id": 38,
+      "name": "JJJ Doe",
+      "email": "Rahun.doe@example.com",
+      "phone": "444445555",
+      "status": "New",
+      "score": "10",
+      "website": "https://www.johndoe.com",
+      "summary": "I want a web app111",
+      "currency": "",
+      "budget": "0",
+      "address": "ttttt",
+      "labels": [
+        ""
+      ],
+      "startDate": null,
+      "companyName": "ABc",
+      "category": "",
+      "city": "",
+      "createdAt": "2025-05-02 06:11:46"
+    },
+    {
+      "id": 37,
+      "name": "Rahun Doe",
+      "email": "Rahun.doe@example.com",
+      "phone": "444445555",
+      "status": "New",
+      "score": "10",
+      "website": "",
+      "summary": "I want a mobile app",
+      "currency": "INR",
+      "budget": "0",
+      "address": "ttttt",
+      "labels": [
+        "New Lead",
+        "dddd"
+      ],
+      "startDate": null,
+      "companyName": "ABc",
+      "category": "Lead",
+      "city": "",
+      "createdAt": "2025-05-02 06:11:40"
+    },
+    {
+      "id": 36,
+      "name": "JJJ Doe",
+      "email": "Rahun.doe@example.com",
+      "phone": "444445555",
+      "status": "New",
+      "score": "10",
+      "website": "https://www.johndoe.com",
+      "summary": "I want a web app111",
+      "currency": "",
+      "budget": "0",
+      "address": "ttttt",
+      "labels": [
+        ""
+      ],
+      "startDate": null,
+      "companyName": "ABc",
+      "category": "Website Development",
+      "city": "",
+      "createdAt": "2025-05-02 06:11:31"
+    },
+    {
+      "id": 35,
+      "name": "Rahun Doe",
+      "email": "Rahun.doe@example.com",
+      "phone": "444445555",
+      "status": "New",
+      "score": "10",
+      "website": "",
+      "summary": "I want a mobile app",
+      "currency": "INR",
+      "budget": "0",
+      "address": "ttttt",
+      "labels": [
+        "New Lead",
+        "dddd"
+      ],
+      "startDate": null,
+      "companyName": "ABc",
+      "category": "Lead",
+      "city": "",
+      "createdAt": "2025-05-02 06:11:30"
+    },
+    {
+      "id": 34,
+      "name": "JJJ Doe",
+      "email": "Rahun.doe@example.com",
+      "phone": "444445555",
+      "status": "New",
+      "score": "10",
+      "website": "https://www.johndoe.com",
+      "summary": "I want a web app111",
+      "currency": "INR",
+      "budget": "0",
+      "address": "ttttt",
+      "labels": [
+        ""
+      ],
+      "startDate": null,
+      "companyName": "ABc",
+      "category": "Website Development",
+      "city": "",
+      "createdAt": "2025-05-02 06:11:17"
+    },
+    {
+      "id": 33,
+      "name": "Rahun Doe",
+      "email": "Rahun.doe@example.com",
+      "phone": "444445555",
+      "status": "New",
+      "score": "10",
+      "website": "",
+      "summary": "I want a mobile app",
+      "currency": "INR",
+      "budget": "120",
+      "address": "ttttt",
+      "labels": [
+        "New Lead",
+        "dddd"
+      ],
+      "startDate": null,
+      "companyName": "ABc",
+      "category": "",
+      "city": "",
+      "createdAt": "2025-05-02 06:10:57"
+    },
+    {
+      "id": 31,
+      "name": "Rahun Doe",
+      "email": "Rahun.doe@example.com",
+      "phone": "444445555",
+      "status": "New",
+      "score": "10",
+      "website": "",
+      "summary": "I want a mobile app",
+      "currency": "INR",
+      "budget": "120",
+      "address": "ttttt",
+      "labels": [
+        "New Lead",
+        "dddd"
+      ],
+      "startDate": null,
+      "companyName": "ABc",
+      "category": "",
+      "city": "",
+      "createdAt": "2025-05-02 06:10:47"
+    },
+    {
+      "id": 32,
+      "name": "JJJ Doe",
+      "email": "Rahun.doe@example.com",
+      "phone": "444445555",
+      "status": "New",
+      "score": "10",
+      "website": "https://www.johndoe.com",
+      "summary": "I want a web app111",
+      "currency": "INR",
+      "budget": "120",
+      "address": "ttttt",
+      "labels": [
+        ""
+      ],
+      "startDate": null,
+      "companyName": "ABc",
+      "category": "Website Development",
+      "city": "",
+      "createdAt": "2025-05-02 06:10:47"
+    },
+    {
+      "id": 30,
+      "name": "Rahun Doe",
+      "email": "Rahun.doe@example.com",
+      "phone": "444445555",
+      "status": "New",
+      "score": "10",
+      "website": "",
+      "summary": "I want a mobile app",
+      "currency": "INR",
+      "budget": "120",
+      "address": "ttttt",
+      "labels": [
+        "New Lead",
+        "dddd"
+      ],
+      "startDate": null,
+      "companyName": "ABc",
+      "category": "Lead",
+      "city": "",
+      "createdAt": "2025-05-02 06:10:19"
+    },
+    {
+      "id": 29,
+      "name": "JJJ Doe",
+      "email": "Rahun.doe@example.com",
+      "phone": "444445555",
+      "status": "New",
+      "score": "10",
+      "website": "https://www.johndoe.com",
+      "summary": "I want a web app111",
+      "currency": "INR",
+      "budget": "120",
+      "address": "ttttt",
+      "labels": [
+        ""
+      ],
+      "startDate": null,
+      "companyName": "ABc",
+      "category": "Website Development",
+      "city": "",
+      "createdAt": "2025-05-02 06:10:04"
+    },
+    {
+      "id": 28,
+      "name": "JJJ Doe",
+      "email": "Rahun.doe@example.com",
+      "phone": "444445555",
+      "status": "New",
+      "score": "10",
+      "website": "https://www.johndoe.com",
+      "summary": "I want a web app111",
+      "currency": "INR",
+      "budget": "120",
+      "address": "ttttt",
+      "labels": [
+        ""
+      ],
+      "startDate": null,
+      "companyName": "ABc",
+      "category": "Website Development",
+      "city": "",
+      "createdAt": "2025-05-02 06:09:55"
+    },
+    {
+      "id": 27,
+      "name": "JJJ Doe",
+      "email": "Rahun.doe@example.com",
+      "phone": "444445555",
+      "status": "New",
+      "score": "10",
+      "website": "https://www.johndoe.com",
+      "summary": "I want a web app111",
+      "currency": "INR",
+      "budget": "120",
+      "address": "ttttt",
+      "labels": [
+        ""
+      ],
+      "startDate": null,
+      "companyName": "ABc",
+      "category": "Website Development",
+      "city": "Delhi",
+      "createdAt": "2025-05-02 06:09:49"
+    },
+    {
+      "id": 26,
+      "name": "JJJ Doe",
+      "email": "Rahun.doe@example.com",
+      "phone": "444445555",
+      "status": "New",
+      "score": "10",
+      "website": "https://www.johndoe.com",
+      "summary": "I want a web app111",
+      "currency": "INR",
+      "budget": "120",
+      "address": "ttttt",
+      "labels": [
+        "New Lead",
+        "sssss"
+      ],
+      "startDate": null,
+      "companyName": "ABc",
+      "category": "Website Development",
+      "city": "Delhi",
+      "createdAt": "2025-05-02 06:09:43"
+    },
+    {
+      "id": 25,
+      "name": "Rahun Doe",
+      "email": "Rahun.doe@example.com",
+      "phone": "444445555",
+      "status": "New",
+      "score": "10",
+      "website": "",
+      "summary": "I want a mobile app",
+      "currency": "INR",
+      "budget": "120",
+      "address": "ttttt",
+      "labels": [
+        "New Lead",
+        "dddd"
+      ],
+      "startDate": null,
+      "companyName": "ABc",
+      "category": "Lead",
+      "city": "",
+      "createdAt": "2025-05-02 06:09:08"
+    },
+    {
+      "id": 24,
+      "name": "JJJ Doe",
+      "email": "Rahun.doe@example.com",
+      "phone": "444445555",
+      "status": "New",
+      "score": "10",
+      "website": "https://www.johndoe.com",
+      "summary": "I want a web app111",
+      "currency": "INR",
+      "budget": "120",
+      "address": "ttttt",
+      "labels": [
+        ""
+      ],
+      "startDate": null,
+      "companyName": "ABc",
+      "category": "Website Development",
+      "city": "Delhi",
+      "createdAt": "2025-05-02 06:05:51"
+    },
+    {
+      "id": 23,
+      "name": "Rahun Doe",
+      "email": "Rahun.doe@example.com",
+      "phone": "444445555",
+      "status": "New",
+      "score": "10",
+      "website": "",
+      "summary": "I want a mobile app",
+      "currency": "INR",
+      "budget": "120",
+      "address": "ttttt",
+      "labels": [
+        "New Lead",
+        "dddd"
+      ],
+      "startDate": null,
+      "companyName": "ABc",
+      "category": "Lead",
+      "city": "Gwalior",
+      "createdAt": "2025-05-02 05:59:50"
+    }
+  ]
+}
+
+
+
+Thankyou for providing good code i have updated my code with your given code. But i did not understand where i need to add _buildBody() method and red line appeared in filteredLead variable due to _allLeads variable. I will share the code please check the entire code i have updated correctly or not.
+
+
+Thankyou for providing good code with adding all the functionalities i have updated my code with your given code. Now in lead.dart we are not taking all the fields that was coming from an api, we need to take all the fields that may be use in future. I will share some leads data that have all the fields.
+{
+      "id": 47,
+      "name": "Nam",
+      "email": "prathamvajpai014@gmail.com",
+      "phone": "8770483647",
+      "status": "New",
+      "score": "90",
+      "website": "",
+      "summary": "djdhshdjshduppmsjs",
+      "currency": "INR",
+      "budget": "26",
+      "address": "ksjsjd",
+      "labels": [
+        "Repeat Client"
+      ],
+      "startDate": null,
+      "companyName": "",
+      "category": "E-commerce Setup",
+      "city": "Gwl",
+      "createdAt": "2025-05-08 05:23:48"
+    },
+    {
+      "id": 46,
+      "name": "Pratham",
+      "email": "prathamvajpai014@gmail.com",
+      "phone": "8770483647",
+      "status": "New",
+      "score": "12",
+      "website": "",
+      "summary": "jajshshhajsjdjs",
+      "currency": "INR",
+      "budget": "56",
+      "address": "nodia",
+      "labels": [
+        "Repeat Client"
+      ],
+      "startDate": null,
+      "companyName": "",
+      "category": "UI/UX Design",
+      "city": "Gwalior",
+      "createdAt": "2025-05-02 09:56:13"
+    },
+
+
+
+Thankyou for providing good code i have updated code with your shared one. When i clicked Apply Filter, the button was disabled, and a loader appeared. After 2 seconds, a success message appeared.
+Button was re-enabled, ready for the next click. Its working good. In LeadsFilterPage we are displaying static storing categories now we need to integrate the api items of categories will be come from an api but the icon of each item will not be come, we need to map the icon with each particular items.
+I will share the api details - 
+https://kodemelonthemes.com/lead_mgmt/api/leadCategories
+method - get
+response - 
+[
+  {
+    "id": 1,
+    "category_name": "E-commerce"
+  },
+  {
+    "id": 4,
+    "category_name": "Education"
+  },
+  {
+    "id": 6,
+    "category_name": "Finance"
+  },
+  {
+    "id": 3,
+    "category_name": "Healthcare"
+  },
+  {
+    "id": 8,
+    "category_name": "Logistics"
+  },
+  {
+    "id": 5,
+    "category_name": "Real Estate"
+  },
+  {
+    "id": 9,
+    "category_name": "Retail"
+  },
+  {
+    "id": 7,
+    "category_name": "Travel"
+  }
+]
+
+Currently in our code - 
+Set<String> selectedCategories = {};
+
+final List<Map<String, dynamic>> categories = [
+    {"source": "Software Development", "icon": FontAwesomeIcons.laptopCode},
+    {"source": "Marketing Campaign", "icon": FeatherIcons.trendingUp},
+    {"source": "E-commerce Setup", "icon": CupertinoIcons.cart_fill},
+    {"source": "UI/UX Design", "icon": EvaIcons.colorPaletteOutline},
+    {"source": "IT Support / Maintenance", "icon": Icons.build_circle},
+    {"source": "Data Analytics / BI", "icon": FeatherIcons.barChart2}
+];
+
+
+Thankyou for providing good code i have updated code with your given code now the design its looking very good. We have integrate the category api and mapped the items with their icons.
+Now i have integrated the lead sources api only mapping of icon with specific item of lead sources is pending. Can you create the sourcesIcons of lead sources item as you have created for categoryIcons.
+
+
+Thankyou for providing very good code i have updated code with your given code the dropdown was perfectly displayed data that was come from an api. I also integrated same api and mapping of icons with items in lead status and lead sources.
+Now in create lead screen i have added city as an form field now i want to convert them in a dropdown as the lead category dropdown and items will be come from an api but in city case there will be no icon want to display.
+I will share api details - 
+https://kodemelonthemes.com/lead_mgmt/api/cities
+method - get
+response - 
+[
+  {
+    "id": 67,
+    "city_name": "Agartala"
+  },
+  {
+    "id": 72,
+    "city_name": "Agra"
+  },
+  {
+    "id": 17,
+    "city_name": "Ahmedabad"
+  },
+  {
+    "id": 46,
+    "city_name": "Aizawl"
+  },
+  {
+    "id": 53,
+    "city_name": "Amritsar"
+  },
+  {
+    "id": 29,
+    "city_name": "Bengaluru"
+  },
+  {
+    "id": 13,
+    "city_name": "Bhilai"
+  },
+  {
+    "id": 36,
+    "city_name": "Bhopal"
+  },
+  {
+    "id": 49,
+    "city_name": "Bhubaneswar"
+  },
+]
+
+_buildFormField(
+                  label: "City",
+                  hint: "Enter City",
+                  controller: _cityController,
+                  icon: MdiIcons.homeCityOutline,
+                  mandatory: true,
+                  validator: _validateCity,
+),
+
+Widget _buildFormField({
+    required String label,
+    required String hint,
+    required TextEditingController controller,
+    required IconData icon,
+    required bool mandatory,
+    String? Function(String?)? validator, // Add validator parameter
+    TextInputType? keyboardType,
+  }) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        mandatory
+            ? Text.rich(
+          TextSpan(
+            text: label,
+            style: TextStyle(
+              fontSize: 13,
+              color: Colors.grey.shade600,
+              fontWeight: FontWeight.w800,
+            ),
+            children: [
+              TextSpan(
+                text: ' *',
+                style: TextStyle(
+                  color: Colors.red,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ],
+          ),
+        )
+            : Text(
+          label,
+          style: TextStyle(
+            fontSize: 13,
+            color: Colors.grey.shade600,
+            fontWeight: FontWeight.w800,
+          ),
+        ),
+        SizedBox(height: 6),
+        TextFormField(
+          controller: controller,
+          validator: mandatory ? validator : null, // Apply validator if mandatory
+          keyboardType: keyboardType, // Add this
+          decoration: InputDecoration(
+            hintText: hint,
+            hintStyle: TextStyle(
+              color: Colors.grey,
+              fontWeight: FontWeight.bold,
+              fontSize: 13,
+            ),
+            contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 16),
+            filled: true,
+            fillColor: Color(0xFFf6f6f6),
+            enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(40),
+              borderSide: BorderSide(color: Colors.grey.shade300, width: 1.2),
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(40),
+              borderSide: BorderSide(color: Colors.grey.shade400, width: 1.5),
+            ),
+            prefixIcon: Icon(icon),
+            prefixIconColor: Color(0xFF6660DC),
+          ),
+        ),
+        SizedBox(height: 15),
+      ],
+    );
+  }
+
+
+
+Thankyou for providing good code i have updated my code with your given code. Now in leads_page screen we have integrated delete and archive functionality on the swipe of card from left swipe to archive and right swipe to delete the lead card. These functionality is working good with smoothly but here we need to provide more stabilization currently by mistakely i swipe the left or right side the card was archived or deleted accidentally. So here is required to add proper stablization when user swipe left or right the swipping stabilization willl good and we dont need to perform operation just after swipping, after swipping when user clicked on delete or archive button then operation will perform. I will share the code of lead_Card.dart -                                                
